@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MybatisBuilder.project.settings">
+    <option name="connectionInfoList">
+      <list>
+        <ConnectionInfo>
+          <option name="database" value="mrs" />
+          <option name="description" value="mrs" />
+          <option name="driverClass" value="" />
+          <option name="driverLibrary" value="" />
+          <option name="driverType" value="PostgreSQL" />
+          <option name="host" value="localhost" />
+          <option name="id" value="052f5bd221904fc5b6d625a9a29da18c" />
+          <option name="name" value="mrs" />
+          <option name="port" value="5432" />
+          <option name="url" value="" />
+          <option name="userName" value="mrs" />
+        </ConnectionInfo>
+      </list>
+    </option>
+    <option name="defaultParameters">
+      <DefaultParameters>
+        <option name="renameConfig">
+          <Config>
+            <option name="mapperTypePattern" value="" />
+            <option name="exampleTypePattern" value="" />
+            <option name="sqlFileNamePattern" value="" />
+          </Config>
+        </option>
+        <option name="selectWithLockConfig">
+          <SelectWithLockConfig>
+            <option name="byPrimaryKeyWithLockOverride" value="" />
+            <option name="byExampleWithLockOverride" value="" />
+            <option name="byExampleWithLockEnabled" value="true" />
+          </SelectWithLockConfig>
+        </option>
+      </DefaultParameters>
+    </option>
+    <option name="historyMap">
+      <map>
+        <entry key="JAVA_CLIENT_PACKAGE">
+          <value>
+            <list>
+              <option value="mapper" />
+            </list>
+          </value>
+        </entry>
+        <entry key="JAVA_MODEL_PACKAGE">
+          <value>
+            <list>
+              <option value="model" />
+            </list>
+          </value>
+        </entry>
+        <entry key="SQL_MAP_PACKAGE">
+          <value>
+            <list>
+              <option value="sqlmap" />
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="lastGeneratorParamWrapper">
+      <GeneratorParamWrapper>
+        <option name="defaultTableConfigWrapper">
+          <TableConfigurationWrapper>
+            <option name="domainObjectRenamingRule">
+              <DomainObjectRenamingRule>
+                <option name="replaceString" value="" />
+                <option name="searchString" value="" />
+              </DomainObjectRenamingRule>
+            </option>
+            <option name="generatedKeyWrapper">
+              <GeneratedKeyWrapper>
+                <option name="column" value="" />
+                <option name="identity" value="true" />
+                <option name="statement" value="MYSQL" />
+              </GeneratedKeyWrapper>
+            </option>
+          </TableConfigurationWrapper>
+        </option>
+        <option name="javaClientConfig">
+          <JavaClientGeneratorConfiguration>
+            <option name="configurationType" value="XMLMAPPER" />
+            <option name="targetPackage" value="mapper" />
+            <option name="targetProject" value="C:\dev\intellij\sp_app\src\main\java\core\infrastructure" />
+          </JavaClientGeneratorConfiguration>
+        </option>
+        <option name="javaModelConfig">
+          <JavaModelGeneratorConfiguration>
+            <option name="targetPackage" value="model" />
+            <option name="targetProject" value="C:\dev\intellij\sp_app\src\main\java\core\infrastructure\model" />
+          </JavaModelGeneratorConfiguration>
+        </option>
+        <option name="selectedPlugins">
+          <map>
+            <entry key="com.chuntung.plugin.mybatis.builder.generator.plugins.ExampleRowBoundsPlugin" />
+            <entry key="com.chuntung.plugin.mybatis.builder.generator.plugins.MapperAnnotationPlugin">
+              <value>
+                <PluginConfigWrapper>
+                  <option name="json" value="{&quot;customAnnotationType&quot;:&quot;org.springframework.stereotype.Repository&quot;}" />
+                  <option name="type" value="com.chuntung.plugin.mybatis.builder.generator.plugins.MapperAnnotationPlugin$Config" />
+                </PluginConfigWrapper>
+              </value>
+            </entry>
+            <entry key="com.chuntung.plugin.mybatis.builder.generator.plugins.selectwithlock.SelectWithLockPlugin">
+              <value>
+                <PluginConfigWrapper>
+                  <option name="json" value="{&quot;byPrimaryKeyWithLockOverride&quot;:&quot;&quot;,&quot;byExampleWithLockOverride&quot;:&quot;&quot;,&quot;byPrimaryKeyWithLockEnabled&quot;:true,&quot;byExampleWithLockEnabled&quot;:true}" />
+                  <option name="type" value="com.chuntung.plugin.mybatis.builder.generator.plugins.selectwithlock.SelectWithLockConfig" />
+                </PluginConfigWrapper>
+              </value>
+            </entry>
+          </map>
+        </option>
+        <option name="sqlMapConfig">
+          <SqlMapGeneratorConfiguration>
+            <option name="targetPackage" value="sqlmap" />
+            <option name="targetProject" value="$PROJECT_DIR$/src/main/resources" />
+          </SqlMapGeneratorConfiguration>
+        </option>
+      </GeneratorParamWrapper>
+    </option>
+    <option name="tableInfoMap">
+      <map>
+        <entry key="mrs#accounts">
+          <value>
+            <TableInfo>
+              <option name="database" value="mrs" />
+              <option name="domainName" value="Accounts" />
+              <option name="tableName" value="accounts" />
+            </TableInfo>
+          </value>
+        </entry>
+        <entry key="mrs#book">
+          <value>
+            <TableInfo>
+              <option name="database" value="mrs" />
+              <option name="domainName" value="Book" />
+              <option name="tableName" value="book" />
+            </TableInfo>
+          </value>
+        </entry>
+        <entry key="mrs#customers">
+          <value>
+            <TableInfo>
+              <option name="database" value="mrs" />
+              <option name="domainName" value="Customers" />
+              <option name="tableName" value="customers" />
+            </TableInfo>
+          </value>
+        </entry>
+        <entry key="mrs#employee">
+          <value>
+            <TableInfo>
+              <option name="database" value="mrs" />
+              <option name="domainName" value="Employee" />
+              <option name="tableName" value="employee" />
+            </TableInfo>
+          </value>
+        </entry>
+        <entry key="mrs#passwd">
+          <value>
+            <TableInfo>
+              <option name="database" value="mrs" />
+              <option name="domainName" value="Passwd" />
+              <option name="tableName" value="passwd" />
+            </TableInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

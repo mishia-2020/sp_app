@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+  <context defaultModelType="flat" id="mybatis-builder" targetRuntime="MyBatis3">
+    <property name="endingDelimiter" value="`" />
+    <property name="beginningDelimiter" value="`" />
+    <property name="autoDelimitKeywords" value="true" />
+    <property name="javaFileEncoding" value="UTF-8" />
+
+    <!-- プラグイン -->
+    <plugin type="org.mybatis.generator.plugins.MapperAnnotationPlugin" />
+    <plugin type="org.mybatis.generator.plugins.UnmergeableXmlMappersPlugin" />
+    <plugin type="com.chuntung.plugin.mybatis.builder.generator.plugins.RenamePlugin">
+      <property name="type" value="com.chuntung.plugin.mybatis.builder.generator.plugins.RenamePlugin" />
+    </plugin>
+    <plugin type="com.chuntung.plugin.mybatis.builder.generator.plugins.selectwithlock.SelectWithLockPlugin">
+      <property name="byPrimaryKeyWithLockEnabled" value="true" />
+      <property name="byExampleWithLockEnabled" value="true" />
+      <property name="type" value="com.chuntung.plugin.mybatis.builder.generator.plugins.selectwithlock.SelectWithLockPlugin" />
+      <property name="byExampleWithLockOverride" value="selectByExampleWithLock" />
+      <property name="byPrimaryKeyWithLockOverride" value="selectByPrimaryKeyWithLock" />
+    </plugin>
+
+    <!-- コメント生成の抑制 -->
+    <commentGenerator type="com.chuntung.plugin.mybatis.builder.generator.CustomCommentGenerator">
+      <property name="addDatabaseRemark" value="true" />
+      <property name="generatedComment" value="generated automatically, do not modify!" />
+    </commentGenerator>
+
+    <!-- DB接続 -->
+    <jdbcConnection connectionURL="jdbc:postgresql://localhost:5432/mrs" driverClass="org.postgresql.Driver" password="mrs" userId="mrs" />
+
+    <javaTypeResolver>
+      <property name="useJSR310Types" value="false" />
+      <property name="forceBigDecimals" value="true" />
+    </javaTypeResolver>
+
+
+    <!-- モデル生成 -->
+    <javaModelGenerator targetPackage="core.infrastructure.model" targetProject="C:\dev\intellij\sp_app\src\main\java\">
+      <property name="trimStrings" value="true" />
+      <property name="enableSubPackages" value="true" />
+    </javaModelGenerator>
+
+    <!-- Mapper XML生成 -->
+    <sqlMapGenerator targetPackage="sqlmap" targetProject="C:/dev/intellij/sp_app/src/main/resources">
+      <property name="enableSubPackages" value="true" />
+    </sqlMapGenerator>
+
+    <!-- Mapper生成 -->
+    <javaClientGenerator targetPackage="core.infrastructure.mapper" targetProject="C:\dev\intellij\sp_app\src\main\java\" type="XMLMAPPER">
+      <property name="enableSubPackages" value="true" />
+    </javaClientGenerator>
+
+    <!-- 対象テーブル -->
+    <table schema="mrs" tableName="%" modelType="flat" />
+
+  </context>
+</generatorConfiguration>

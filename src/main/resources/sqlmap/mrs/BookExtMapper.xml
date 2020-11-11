@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="app.infrastructure.mapper.mrs.BookExtMapper">
+  <resultMap id="BaseResultMap" type="core.infrastructure.model.mrs.Book">
+    <!-- @mbg.generated: generated automatically, do not modify! -->
+    <result column="book_id" jdbcType="VARCHAR" property="bookId" />
+    <result column="book_name" jdbcType="VARCHAR" property="bookName" />
+  </resultMap>
+  <select id="selectByBookByBookId" parameterType="core.infrastructure.model.mrs.BookExample" resultMap="BaseResultMap">
+    select
+      book_id
+      ,book_name
+    from mrs.book
+    where
+      book_id = '${@core.infrastructure.DbConstEnum$book@B1.getCode}'
+  </select>
+</mapper>
