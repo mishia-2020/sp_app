@@ -27,10 +27,14 @@ public class BookService {
      *
      * @return 本マスタ一覧
      */
-    public List<BookResponse> getBookList() {
+    public List<BookResponse> getBookList() throws Exception {
 
 
         List<Book> books = bookMapper.selectByExample(null);
+
+        if(books.size()< 0){
+            throw new Exception("エラーです。");
+        }
 
         // 返却値生成
         List<BookResponse> resBooks = new ArrayList<>();

@@ -17,7 +17,7 @@ public class BookRestController {
 
     @GetMapping("/books")
     @ResponseBody
-    public List<BookResponse> getBooks(){
+    public List<BookResponse> getBooks() throws Exception {
 
         return bookService.getBookList();
     }
